@@ -5,6 +5,9 @@ module.exports = () => ({
 		hot: true,
 		stats: {
 			colors: true
+		},
+		proxy: {
+			'/': 'http://localhost:5000'
 		}
 	},
 	module: {
