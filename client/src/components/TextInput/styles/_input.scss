@@ -1,0 +1,40 @@
+.input {
+	margin: 0;
+	outline: 0;
+	-webkit-tap-highlight-color: rgba(255,255,255,0);
+	padding: 10px;
+	background-color: #ffffff;
+	border: 1px solid #dadce0;
+	color: $main-black;
+	border-radius: 4px;
+	transition: border-color .2s ease;
+	width: 100%;
+}
+
+.input:focus {
+	border-color: #85b7d9;
+}
+
+.input::placeholder {
+	color: #bdbdbd;
+	transition: color .2s ease;
+}
+
+.input:focus::placeholder {
+	color: #858585;
+}
+
+.input_error {
+	background-color: $error-background;
+	border-color: $error-border;
+	color: $error-color;
+}
+
+.input_error::placeholder {
+	color: #e7bdbc;
+	transition: color .2s ease;
+}
+
+.input_error:focus::placeholder {
+	color: #da9796;
+}

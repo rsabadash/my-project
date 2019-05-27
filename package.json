@@ -4,10 +4,12 @@
 	"description": "",
 	"main": "server.js",
 	"scripts": {
-		"start": "nodemon app.js",
-		"start-server": "node app.js",
-		"client": "cd client && npm run dev",
-		"dev": "concurrently --kill-others-on-fail \"npm start\" \"npm run client\""
+		"start": "nodemon server.js",
+		"start-server": "node server.js",
+		"client-dev": "cd client && npm run dev",
+		"client-prod": "cd client && npm run prod",
+		"dev": "concurrently --kill-others-on-fail \"npm start\" \"npm run client-dev\"",
+		"prod": "concurrently --kill-others-on-fail \"npm run start-server\" \"npm run client-prod\""
 	},
 	"repository": {
 		"type": "git",
@@ -25,6 +27,8 @@
 	},
 	"dependencies": {
 		"body-parser": "^1.18.3",
-		"express": "^4.16.4"
+		"dotenv": "^8.0.0",
+		"express": "^4.16.4",
+		"mongoose": "^5.5.10"
 	}
 }

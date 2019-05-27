@@ -1,0 +1,11 @@
+.register {
+	flex-shrink: 0;
+	border: 1px solid #dadce0;
+	border-radius: 8px;
+	display: block;
+	margin: 0 auto;
+	height: auto;
+	min-height: 250px;
+	padding: $basic-size-unit * 4;
+	width: 450px;
+}

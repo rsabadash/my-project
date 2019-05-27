@@ -1,0 +1,14 @@
+.layout__centered {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	position: relative;
+}
+
+.layout__centered:before,
+.layout__centered:after {
+	flex-grow: 1;
+	content: '';
+	display: block;
+	height: 24px;
+}

@@ -8,7 +8,8 @@ module.exports = () => ({
 		},
 		proxy: {
 			'/': 'http://localhost:5000'
-		}
+		},
+		writeToDisk: true
 	},
 	module: {
 		rules: [
