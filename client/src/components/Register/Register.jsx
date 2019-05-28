@@ -54,14 +54,14 @@ const Register = () => {
 						name="password"
 						type="password"
 						placeholder="Password"
-						validators={[require, minLength(6), crossFields('repeatPassword')]}
+						validators={[require, minLength(6), crossFields('confirmPassword')]}
 						component={props => <TextInput { ...props } />}
 					/>
 					<Field
 						required
-						name="repeatPassword"
+						name="confirmPassword"
 						type="password"
-						placeholder="Repeat password"
+						placeholder="Confirm password"
 						validators={[require, minLength(6), crossFields('password')]}
 						component={props => <TextInput { ...props } />}
 					/>

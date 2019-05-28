@@ -11,8 +11,7 @@ import { LayoutCentered } from '../Layout';
 import {
 	email,
 	require,
-	minLength,
-	crossFields
+	minLength
 } from '../../utils/formValidators';
 
 import classes from './styles/index.scss';
@@ -45,7 +44,7 @@ const LogIn = () => {
 						name="password"
 						type="password"
 						placeholder="Password"
-						validators={[require, minLength(6), crossFields('repeatPassword')]}
+						validators={[require, minLength(6)]}
 						component={props => <TextInput { ...props } />}
 					/>
 					<Button
