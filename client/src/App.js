@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
 const App = () => {
 	return (
-		<Link to="/register">Register</Link>
+		<Fragment>
+			<Link to="/register">Register</Link>
+			<Link to="/login">Log in</Link>
+		</Fragment>
 	)
 };
 

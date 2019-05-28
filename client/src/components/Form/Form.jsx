@@ -110,7 +110,7 @@ const Form = (
 			initValidation(name, formData.values[name]);
 		});
 
-		onSubmit(formData);
+		// onSubmit(formData);
 		onSubmit(formData.values);
 	};
 

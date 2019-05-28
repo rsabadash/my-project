@@ -17,30 +17,21 @@ import {
 
 import classes from './styles/index.scss';
 
-const Register = () => {
+const LogIn = () => {
 	const handleSubmit = values => {
-		console.log(values);
-		axios.post('/register', { ...values })
+		axios.post('/login', { ...values })
 			.then(response => console.log(response));
 	};
 
 	return (
 		<LayoutCentered>
-			<div className={classes.register}>
+			<div className={classes.login}>
 				<PageTitle
 					position="center"
 				>
-					Create an account
+					Log in to account
 				</PageTitle>
 				<Form onSubmit={handleSubmit}>
-					<Field
-						required
-						name="name"
-						type="text"
-						placeholder="Name"
-						validators={[require, minLength(3)]}
-						component={props => <TextInput { ...props } />}
-					/>
 					<Field
 						required
 						name="email"
@@ -57,19 +48,11 @@ const Register = () => {
 						validators={[require, minLength(6), crossFields('repeatPassword')]}
 						component={props => <TextInput { ...props } />}
 					/>
-					<Field
-						required
-						name="repeatPassword"
-						type="password"
-						placeholder="Repeat password"
-						validators={[require, minLength(6), crossFields('password')]}
-						component={props => <TextInput { ...props } />}
-					/>
 					<Button
 						type="submit"
 						position="full"
 					>
-						Register
+						Log in
 					</Button>
 				</Form>
 			</div>
@@ -77,4 +60,4 @@ const Register = () => {
 	);
 };
 
-export { Register };
+export { LogIn };
